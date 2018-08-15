@@ -1,6 +1,10 @@
+"""
+ntlib - Python library for performing common operations in Number Theory
+"""
+
 def gcd(a, b):
     """
-    Compute gcd(a, b) with the Euclidean Algorithm
+    Compute and return gcd(a, b) with the Euclidean Algorithm
     """
 
     # Normalize input such that a >= b
@@ -23,8 +27,15 @@ def gcd(a, b):
         b = remainder
 
     # a is a multiple of b
-    if len(r_list) < 2:
+    if len(r_list) == 1:
         return a
 
     # Return last non-zero remainder
     return r_list[-2]
+
+def areRelativelyPrime(a, b):
+    """
+    Return True if a and b are relatively prime/mutually prime/coprime
+    """
+
+    return gcd(a, b) == 1

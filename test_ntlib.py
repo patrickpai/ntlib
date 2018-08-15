@@ -7,5 +7,8 @@ def test_gcd():
     assert ntlib.gcd(15, 28) == 1
     assert ntlib.gcd(123, 456) == 3
     assert ntlib.gcd(119, 259) == 7
-
     assert ntlib.gcd(259, 119) == 7
+
+def test_areRelativelyPrime():
+    assert ntlib.areRelativelyPrime(14, 15) == True
+    assert ntlib.areRelativelyPrime(21, 40) == True
